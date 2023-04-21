@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
+}
+
+/* --- HEADER --- */
+header {
+    background-image: radial-gradient(circle at center, white 0, navy 100%);
+    margin: 0;
+    user-select: none;
+}
+header h1 {
+    background-color: rgba(50, 50, 50, 0.15);
+    font-size: 75px;
+    display: block;
+    padding: 30px;
+    margin: 30px;
+    float: left;
+    border-radius: 20px;
+    color: black;
+}
+header div {
+    background-color: none;
+    font-size: 55px;
+    padding: 20px;
+    margin: 50px;
+    float: right;
+}
+header div a {
+    text-decoration: none;
+    color: black;
+}
+/* --- NAVIGATION MENU --- */
+nav {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    clear: both;
+}
+nav a {
+    background-color: black;
+    color: white;
+    margin: 0;
+    transition: background-color 0.5s;
+    text-decoration: none;
+    user-select: none;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+nav a:hover {
+    background-color: blue;
+}
+nav a#selected {
+    background-color: #3d3d3d;
+    font-size: 31px;
+    padding: 7px 0;
+}
+/* --- MAIN --- */
+main {
+    padding: 30px;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+main p {
+    font-size: 22px;
+}
+section {
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+section:nth-child(odd) {
+    color: lightblue;
+}
+section:nth-child(even) {
+    color: pink;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+}
+section p, section li {
+    text-align: justify;
+    font-size: 25px;
+}
+img {
+    margin-bottom: 10px;
+}
+
+section.space {
+    color: darkblue;
+    -webkit-text-stroke: 2px rgb(0, 38, 252);
+}
+section.blink {
+    color: indigo;
+}
+section.chaos {
+    color: #22578B;
+}
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+    width: 24px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d; 
+    border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #222; 
+}
+/* --- OTHER --- */
+div.button {
+    display: block;
+    transition: background-color 0.5s;
+    border-radius: 20px;
+}
+div.button:hover {
+    background-color: rgba(50, 50, 50, 0.15);
+}
+ul, p {
+    margin-block: 10px;
+}
+a {
+    color: inherit;
+}
+img {
+    display: block;
+}
+ul ul {
+    margin-block: 0;
+}

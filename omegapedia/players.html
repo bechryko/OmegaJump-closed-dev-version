@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Omegapedia</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            section p, section li {
+                font-size: 20px;
+                margin: 3px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Omegapedia</h1>
+            <div class="button"><a href="../OmegaJump.html">Play OmegaJump now!</a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="gamemodes.html">Game modes</a>
+                <a href="gametypes.html">Game types</a>
+                <a href="platforms.html">Platforms</a>
+                <a id="selected">Players</a>
+                <a>Gods</a>
+                <a>Settings</a>
+                <a>Patch notes</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Players</h2>
+            <p>Players are the entities that are jumping on the platforms and try to beat the challanges the game keeps for them.</p>
+            <section>
+                <h3>Controls</h3>
+                <p>The controls of the game are very simple. There are two buttons and a total of three combinations that can be used to control the player. The binds for [Left] and [Right] buttons can be changed in the game settings in the main menu.</p>
+                <ul>
+                    <li>[Left]: the player moves left</li>
+                    <li>[Right]: the player moves right</li>
+                    <li>[Left and Right]: gives another player jumping assist in <a href="gamemodes.html#coop-gamemode">Cooperative Multiplayer</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Names</h3>
+                <p>The players' names come from the story of the OmegaJump. These are the most important spaceships' names which appear on the story, so the players can feel that they are part of the universe.</p>
+                <p>The names currently in the game:</p>
+                <ul>
+                    <li>Navegiri</li>
+                    <li>Qohuru</li>
+                    <li>Fagau</li>
+                    <li>Jihixxa</li>
+                </ul>
+            </section>
+            <section id="energy-mechanics">
+                <h3>Energy mechanics</h3>
+                <p>Energy is the core upgrading mechanic of the game. Each player can individually collect energy by different means, and can become more powerful with them. Each blue energy gives 1% jump height and 1% speed to the player, and each green energy gives a fair boost to the player's damage against the Gods.</p>
+                <p>Energy collection methods:</p>
+                <ul>
+                    <li>jumping on <a href="platforms.html#energy-platform">Energy platform</a>s or <a href="platforms.html#trick-or-treat-platform">Trick or Treat platform</a>s</li>
+                    <li>executing other players in <a href="gamemodes.html#comp-gamemode">Competitive Multiplayer</a></li>
+                    <li>leveling up in <a href="gamemodes.html#comp-gamemode">Competitive Multiplayer</a></li>
+                    <li>getting shared energy through Brothers-in-Arms connection in <a href="gamemodes.html#coop-gamemode">Cooperative Multiplayer</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Brothers-in-Arms system</h3>
+                <p>Brothers-in-Arms system is only available in <a href="gamemodes.html#coop-gamemode">Cooperative Multiplayer</a> game mode. Each player has a Brothers connection with each other, which they can strengthen through the following methods:</p>
+                <ul>
+                    <li>assisting each other (pressing both movement keys at the same time to toss a player above they are touching)</li>
+                    <li>resurrecting each other via the <a href="platforms.html#resurrection-platform">Resurrection</a> platform</li>
+                </ul>
+                <p>When a Brothers connection reaches its maximum, the two players become Brothers-in-Arms, which appear in the middle of the screen. Being Brothers-in-Arms means lots of opportinuties for both players:</p>
+                <ul>
+                    <li>shared <a href="#energy-mechanics">energy</a> collection</li>
+                    <li>temporary energy boost in a medium range</li>
+                    <li>negative effect immunity in a close range</li>
+                </ul>
+            </section>
+            <section id="duel-system">
+                <h3>Duel system</h3>
+                <p>The Duel system is only available in <a href="gamemodes.html#comp-gamemode">Competitive Multiplayer</a> game mode. Each player has an experience bar at the bottom of the screen, and a level counter next to it. They can collect fight experience to level up and become even more dangerous to the others. The fight exp. collection methods:</p>
+                <ul>
+                    <li>being in close range to other players (very low amount)</li>
+                    <li>knocking other players (fair amount)</li>
+                    <li>executing other players (very great amount)</li>
+                </ul>
+                <p>Players can knock each other by jumping on the top of the others. This causes the loser player to lose a health, or when in one health, to get executed. Execution is a much more dangerous knock which gives the executed player Confusion and Invincibility effects, and the loser player <a href="#energy-mechanics">energy</a> and a lot of fight exp. After being executed, the player's health is set to the (level-dependant) basic.</p>
+                <p>Leveling up is a huge progression for the players. Each level up restores the player to full health, but here are the other bonuses:</p>
+                <ol>
+                    <li>a total of 2 health</li>
+                    <li>a total of 3 health and higher jump after knocks</li>
+                    <li>a total of 4 health and a lot of energy</li>
+                </ol>
+                <p>The first player to reach the maximum level becomes the Champion, and gets the Champion effect.</p>
+            </section>
+            <h2>Effects</h2>
+            <p>Effects play a huge part in the game messing with the players. There are some helpful effects, but the most of them are trying to make them fall down to the unknown.</p>
+            <section>
+                <h3>Blinking</h3>
+                <ul>
+                    <li>caused by jumping on a platform with the <a href="platforms.html#blinkfected-attribute">Blinkfected</a> attribute</li>
+                    <li>the player starts to teleport rapidly and randomly in short distances</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Champion</h3>
+                <ul>
+                    <li>obtained by being the first player to reach maximum level in <a href="gamemodes.html#comp-gamemode">Competitive Multiplayer</a></li>
+                    <li>higher energy gain for the players who knock or execute a player with this effect</li>
+                </ul>
+            </section>
+            <section id="confusion-effect">
+                <h3>Confusion</h3>
+                <ul>
+                    <li>caused by being executed via the <a href="#duel-system">Duel system</a> or by jumping on a <a href="platforms.html#confuse-platform">Confuse platform</a></li>
+                    <li>the controls of the player are swapped</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Invincibility</h3>
+                <ul>
+                    <li>obtained by being executed via the <a href="#duel-system">Duel system</a></li>
+                    <li>the player is immune to being knocked</li>
+                </ul>
+            </section>
+            <section id="invisibility-effect">
+                <h3>Invisibility</h3>
+                <ul>
+                    <li>caused by one of the tricks of the <a href="platforms.html#trick-or-treat-platform">Trick or Treat platform</a></li>
+                    <li>the player is hidden from the screen</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

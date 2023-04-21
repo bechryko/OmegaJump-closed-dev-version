@@ -1,0 +1,33 @@
+DOING
+ - champion effekt
+ - Omegapedia
+
+TODO
+ - TextEffect animation smoothness
+ - addScore animation
+ - blinkfected attribútum megjelenítése (Olivér)
+ - activator és spreading attribútum
+ - SubPage class és keybind beállítások
+ - settingsben sikeres mentés megjelenítése
+ - smooth screen movement ??
+ - dev toolok bekapcsolásának megjelenítése
+ - platform hitbox fix (nagy platformoknál érződik)
+ - stories
+ - custom game beállítás funkciók kiszervezése GameType adattagba
+
+IDEAS
+ - warfare gametype, energy gametype, gamble gametype
+ - Space gametype: proximity platform?
+ - Blink gametype: cycle platform?
+ - illusioner platform (játékosból illúziókat hoz létre) (AI)
+ - effects: stealth (pl troll ellen), sidegravity???
+ - minél több ideje él a god, annál kevesebbet sebződik?? (min. 50%)
+ - gate platformok
+
+LATER UPDATES
+ - universe god
+ - AI
+ - custom game mode
+ - challange run mode
+ - tournament mode
+ - tutorial, training gamemode

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Omegapedia</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            section p, section li {
+                font-size: 20px;
+                margin: 3px 0;
+            }
+            section#basic-platform {
+                color: forestgreen;
+            }
+            section#blinker-platform {
+                color: #2B2D6F;
+            }
+            section#cloaker-platform {
+                color: gold;
+            }
+            section#confuse-platform {
+                color: magenta;
+            }
+            section#energy-platform {
+                color: cyan;
+            }
+            section#enhancer-platform {
+                color: #82E076;
+            }
+            section#god-slayer-platform {
+                color: #16385B;
+            }
+            section#puller-platform {
+                color: #0019b2;
+            }
+            section#resurrection-platform {
+                color: #cfcfcf;
+            }
+            section#teleporting-platform {
+                color: #ca003a;
+            }
+            section#transformer-platform {
+                color: white;
+            }
+            section#trick-or-treat-platform {
+                color: orangered;
+            }
+            section#yeet-platform {
+                color: orange;
+            }
+
+            img#booster {
+                width: 600px;
+                height: 150px;
+                object-fit: cover;
+                object-position: 0 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Omegapedia</h1>
+            <div class="button"><a href="../OmegaJump.html">Play OmegaJump now!</a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="gamemodes.html">Game modes</a>
+                <a href="gametypes.html">Game types</a>
+                <a id="selected">Platforms</a>
+                <a href="players.html">Players</a>
+                <a>Gods</a>
+                <a>Settings</a>
+                <a>Patch notes</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Platforms</h2>
+            <p>Here you can find the complete list of all platforms in the game.</p>
+            <p>If you want to read about their attributes, click <a href="#platform-attributes">here</a>!</p>
+            <section id="basic-platform">
+                <h3>Basic platform</h3>
+                <img src="../img/platforms/Basic.png" width="250px">
+                <ul>
+                    <li>the most common platform in every game types</li>
+                    <li>general jump height</li>
+                    <li>no special abilities</li>
+                    <li>can spawn with projection, moving, troll, booster and activator (only in the <a href="gametypes.html#chaos-gametype">Chaos</a> gametype) attributes</li>
+                </ul>
+            </section>
+            <section id="blinker-platform">
+                <h3>Blinker platform</h3>
+                <img src="../img/platforms/Blinker.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#blink-gametype">Blink</a> gametype</li>
+                    <li>higher jump height</li>
+                    <li>teleport you horizontally to a random position, and vertically a bit higher</li>
+                    <li>can spawn with projection attribute</li>
+                </ul>
+            </section>
+            <section id="cloaker-platform">
+                <h3>Cloaker platform</h3>
+                <img src="../img/platforms/Cloaker.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#chaos-gametype">Chaos</a> gametype</li>
+                    <li>general jump height</li>
+                    <li>turns every other platform <a href="#invisible-attribute">invisible</a> in a certain range</li>
+                    <li>can spawn with projection attribute</li>
+                </ul>
+            </section>
+            <section id="confuse-platform">
+                <h3>Confuse platform</h3>
+                <img src="../img/platforms/Confuse.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#space-gametype">Space</a> gametype</li>
+                    <li>general jump height</li>
+                    <li>gives the jumper player the <a href="players.html#confusion-effect">Confusion</a> effect</li>
+                    <li>can spawn with projection and booster attributes</li>
+                </ul>
+            </section>
+            <section id="energy-platform">
+                <h3>Energy platform</h3>
+                <img src="../img/platforms/Energy.png" width="250px">
+                <img src="../img/platforms/Energy_Empty.png" width="250px">
+                <img src="../img/platforms/Energy_Green.png" width="250px">
+                <ul>
+                    <li>general platform in every game type except in Competitive Multiplayer game mode</li>
+                    <li>general jump height</li>
+                    <li>gives an energy to the jumper player, energy type depending on the platform's color</li>
+                    <li style="color: grey;">after a player jumped on it, its energy storage is emptied</li>
+                    <li style="color: #539f31;">at the start only blue Energy platforms spawn, but after a fair amount of energy collected, green Energy platforms start to take over their place</li>
+                    <li style="color: #539f31;">jumping on a green Energy platform transforms a blue energy into a green energy</li>
+                </ul>
+            </section>
+            <section id="enhancer-platform">
+                <h3>Enhancer platform</h3>
+                <img src="../img/platforms/Enhancer.png" width="250px">
+                <ul>
+                    <li>a common and fearful platform in every game types</li>
+                    <li>general jump height</li>
+                    <li>shoots orbs at random platforms to give a random attribute to each of them</li>
+                    <li>in addition to the random attribute, it spreads all of its attribute values to the targeted platforms</li>
+                </ul>
+            </section>
+            <section id="god-slayer-platform">
+                <h3>God Slayer platform</h3>
+                <img src="../img/platforms/God_Slayer.png" width="250px">
+                <ul>
+                    <li>can be found in every game types but only during God fights</li>
+                    <li>higher jump height</li>
+                    <li>damages the current God with the damage of the jumper player</li>
+                    <li>the platform disappears after usage</li>
+                </ul>
+            </section>
+            <section id="puller-platform">
+                <h3>Puller platform</h3>
+                <img src="../img/platforms/Puller.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#chaos-gametype">Chaos</a> gametype</li>
+                    <li>general jump height</li>
+                    <li>pulls every platform in the screen closer</li>
+                    <li>with the moving attribute, it only pulls the platforms behind it, and only horizontally, but on a bigger distance</li>
+                    <li>can spawn with projection and moving attributes</li>
+                </ul>
+            </section>
+            <section id="resurrection-platform">
+                <h3>Resurrection platform</h3>
+                <img src="../img/platforms/Resurrection.png" width="250px">
+                <ul>
+                    <li>spawns in every game types in <a href="gamemodes.html#coop-gamemode">Cooperative Multiplayer</a> when a player is dead</li>
+                    <li>higher jump height</li>
+                    <li>resurrects the longest dead player</li>
+                    <li>displays the player above it as a ghost that it will resurrect</li>
+                    <li>the platform disappears after usage</li>
+                </ul>
+            </section>
+            <section id="teleporting-platform">
+                <h3>Teleporting platform</h3>
+                <img src="../img/platforms/Teleporting.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#blink-gametype">Blink</a> gametype</li>
+                    <li>lower jump height</li>
+                    <li>teleports a short distance after being jumped on</li>
+                    <li>can spawn with projection, moving, troll and booster attributes</li>
+                </ul>
+            </section>
+            <section id="transformer-platform">
+                <h3>Transformer platform</h3>
+                <img src="../img/platforms/Transformer.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#chaos-gametype">Chaos</a> gametype</li>
+                    <li>general jump height</li>
+                    <li>transforms every platform in the screen to another platform type (and keeps the attributes)</li>
+                    <li>can spawn with projection and booster attributes</li>
+                </ul>
+            </section>
+            <section id="trick-or-treat-platform">
+                <h3>Trick or Treat platform</h3>
+                <img src="../img/platforms/Trick_Or_Treat.png" width="250px">
+                <ul>
+                    <li>occasionally replaces the Energy platform during the Halloween Event</li>
+                    <li>general jump height</li>
+                    <li>have a 50-50% chance to either trick or treat the jumper player
+                        <ul>
+                            <li>treating gives the player lots of energy</li>
+                            <li>the first trick gives every player <a href="players.html#invisibility-effect">Invisibility effect</a> for a few seconds</li>
+                            <li>the second trick makes a lot of platforms disappear</li>
+                            <li>the third trick calls a swarm of ravens that knock away the players they touch</li>
+                        </ul>
+                    </li>
+                    <li>the platform disappears after usage</li>
+                </ul>
+            </section>
+            <section id="yeet-platform">
+                <h3>Yeet platform</h3>
+                <img src="../img/platforms/Yeet.png" width="250px">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#space-gametype">Space</a> gametype</li>
+                    <li>higher jump height</li>
+                    <li>yeets the jumper player in a random direction sideways</li>
+                    <li>with the moving attribute, it yeets the player in the direction this is moving</li>
+                    <li>can spawn with the projection, moving and booster attributes</li>
+                </ul>
+            </section>
+            <h2 id="platform-attributes">Attributes</h2>
+            <p>Platform attributes are specialties for each individual platform. Some are displayed via animations or visual clues, some are hidden, and are waiting for the players to mess with them.</p>
+            <section>
+                <h3>Activator</h3>
+                <ul>
+                    <li>unique to the <a href="gametypes.html#chaos-gametype">Chaos</a> gametype</li>
+                    <li>the platform chooses another non-Basic platform, and activates its on-jump effect</li>
+                    <li>activations can chain</li>
+                </ul>
+            </section>
+            <section id="blinkfected-attribute">
+                <h3>Blinkfected</h3>
+                <img src="../img/animations/blinkfected.png" width="250px" id="blinkfected">
+                <ul>
+                    <li>unique to the <a href="gametypes.html#blink-gametype">Blink</a> gametype</li>
+                    <li>cannot be generated, only via <a href="#enhancer-platform">Enhancer platform</a></li>
+                    <li>on touch gives the jumper player blinking effect</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Booster</h3>
+                <img src="../img/animations/booster.png" width="250px" id="booster">
+                <ul>
+                    <li>can be generated in any game type</li>
+                    <li>increases the jump height from that platform</li>
+                </ul>
+            </section>
+            <section id="invisible-attribute">
+                <h3>Invisible</h3>
+                <ul>
+                    <li>can only be applied to a platform via a <a href="#cloaker-platform">Cloaker</a> platform</li>
+                    <li>makes the platform not visible for the players</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Moving</h3>
+                <ul>
+                    <li>can be generated in any game type</li>
+                    <li>the platform moves horizontally in a direction with certain speed</li>
+                    <li>gives special functionality to the <a href="#puller-platform">Puller</a> and <a href="#yeet-platform">Yeet</a> platforms</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Projection</h3>
+                <ul>
+                    <li>can be generated in any game type</li>
+                    <li>the platform becomes invisible and creates a projection of itself above</li>
+                    <li>if a player jumps on the projection, it disappears, and the original platform turns visible</li>
+                    <li>the players can still jump on the original platform, even if it's invisible</li>
+                    <li>this is the most common platform attribute in the game</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Troll</h3>
+                <ul>
+                    <li>can be generated in any game type</li>
+                    <li>pretends to be a normal platform</li>
+                    <li>if a player tries to jump on it, it moves away</li>
+                    <li>the deadliest platform attribute in the game's history</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

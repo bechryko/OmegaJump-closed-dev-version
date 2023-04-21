@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>OmegaJump (Pre-release)</title>
+        <style>
+            body {
+                overflow: hidden;
+                margin: 0;
+            }
+            canvas {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="menu"></canvas>
+        <canvas id="game"></canvas>
+        <script>
+            if(!Array.prototype.findLast) {
+                Array.prototype.findLast = function(callback) {
+                    return this.filter(callback).at(-1);
+                };
+            }
+            
+            const random = (min = 1, max = 0) => {
+                if(max < min) {
+                    [min, max] = [max, min];
+                }
+                if(typeof min == "object") {
+                    return min[Math.floor(random(min.length))];
+                }
+                return Math.random() * (max - min) + min;
+            }
+            const unitToPx = unit => Math.round(unit / 100 * globalThis.innerWidth);
+            const pxToUnit = px => px * 100 / globalThis.innerWidth;
+
+            globalThis.document.eventListeners = [];
+            globalThis.document.newEventListener = function(type, event) {
+                globalThis.document.addEventListener(type, event);
+                globalThis.document.eventListeners.push({type: type, event: event});
+            };
+            globalThis.document.clearEventListeners = function() {
+                for(const el of globalThis.document.eventListeners) {
+                    globalThis.document.removeEventListener(el.type, el.event);
+                }
+            };
+
+            let date = new Date();
+            {
+                let isDateBetween = (start, end) => Date.parse(date) >= Date.parse(new Date(date.getFullYear(), start.month - 1, start.day)) && Date.parse(date) < Date.parse(new Date(date.getFullYear(), end.month - 1, end.day + 1));
+                let firstFridayInMay = {month: 5, day: 1};
+                while((new Date(date.getFullYear(), firstFridayInMay.month - 1, firstFridayInMay.day)).getDay() != 5) {
+                    firstFridayInMay.day++;
+                }
+                Date.events = {
+                    Halloween: isDateBetween({month: 10, day: 24}, {month: 11, day: 6}),
+                    //New_Year: isDateBetween({month: 12, day: 25}, {month: 12, day: 31}) || isDateBetween({month: 1, day: 1}, {month: 1, day: 7}),
+                    //Ammunition_Days: isDateBetween({month: 1, day: 20}, {month: 1, day: 26}),
+                    //twistedEvent: isDateBetween({month: 4, day: 1}, {month: 4, day: 7}),
+                    //Space_Festival: isDateBetween(firstFridayInMay, {month: firstFridayInMay.month, day: firstFridayInMay.day + 6})
+                };
+                for(const event in Date.events) {
+                    if(Date.events[event]) {
+                        Date.currentEvent = event;
+                        break;
+                    }
+                }
+                if(!Date.currentEvent) {
+                    Date.events[Date.currentEvent = "None"] = true;
+                }
+            }
+            
+            let startUpdate = (update, endFunc = () => {}) => {
+                let suTime = Date.now();
+                let suFunc = null;
+                requestAnimationFrame(suFunc = function() {
+                    if(update((-suTime + (suTime = Date.now())) / 1000)) {
+                        requestAnimationFrame(suFunc);
+                    } else {
+                        requestAnimationFrame(endFunc);
+                    }
+                });
+            };
+
+            const storage = {
+                save: (key, value = null) => localStorage.setItem(key, JSON.stringify(value)),
+                load: (key, value) => (key = localStorage.getItem(key)) === null ? value : JSON.parse(key)
+            };
+        </script>
+        <script src="draw.js"></script>
+        <script src="effects.js"></script>
+        <script src="platforms.js"></script>
+        <script src="players.js"></script>
+        <script src="gods.js"></script>
+        <script src="gametypes.js"></script>
+        <script src="main.js"></script>
+        <script src="menu.js"></script>
+    </body>
+</html>
