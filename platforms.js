@@ -466,7 +466,7 @@ class PullerPlatform extends Platform {
 class ResurrectionPlatform extends Platform {
     static pool = [];
 
-    static SPAWN_CHANCE = 0.01;
+    static SPAWN_CHANCE = 0.02;
     static JUMP_HEIGHT = 20.5;
 
     static newPlatform(pos, attributes = {projection: 0}) {
